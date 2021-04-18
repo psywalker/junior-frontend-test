@@ -94,7 +94,6 @@ const ProductList = memo(({ productItems, isFetch, isFetchError }) => {
     )
   )
   const fetchErrorMessage = 'Ошибка сервера. Попробуйте обновить страницу.'
-  console.log('1.1: ', location)
   return (
     <main className={styles.productList} role="main">
       {isFetch && <LoadingOverlay active={isFetch} spinner text="Загрузка продуктов..." styles={overlayStyles()} />}
