@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/junior-frontend-test/static/css/main.b0554291.chunk.css",
+    "main.js": "/junior-frontend-test/static/js/main.4f71afeb.chunk.js",
+    "main.js.map": "/junior-frontend-test/static/js/main.4f71afeb.chunk.js.map",
+    "runtime-main.js": "/junior-frontend-test/static/js/runtime-main.97f9adb8.js",
+    "runtime-main.js.map": "/junior-frontend-test/static/js/runtime-main.97f9adb8.js.map",
+    "static/js/2.518b989f.chunk.js": "/junior-frontend-test/static/js/2.518b989f.chunk.js",
+    "static/js/2.518b989f.chunk.js.map": "/junior-frontend-test/static/js/2.518b989f.chunk.js.map",
+    "index.html": "/junior-frontend-test/index.html",
+    "static/css/main.b0554291.chunk.css.map": "/junior-frontend-test/static/css/main.b0554291.chunk.css.map",
+    "static/js/2.518b989f.chunk.js.LICENSE.txt": "/junior-frontend-test/static/js/2.518b989f.chunk.js.LICENSE.txt",
+    "static/media/Status.module.scss": "/junior-frontend-test/static/media/checkbox.42e7b0a0.svg",
+    "static/media/Filters.module.scss": "/junior-frontend-test/static/media/filters.29d1d5f1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97f9adb8.js",
+    "static/js/2.518b989f.chunk.js",
+    "static/css/main.b0554291.chunk.css",
+    "static/js/main.4f71afeb.chunk.js"
+  ]
+}
