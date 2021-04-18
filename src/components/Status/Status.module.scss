@@ -1,0 +1,35 @@
+.status {
+  margin: 4px 12px 12px 0;
+  display: flex;
+  cursor: pointer;
+}
+
+.statusLabel {
+  position: relative;
+  padding-left: 10px;
+  cursor: pointer;
+  &::before {
+    position: absolute;
+    left: -20px;
+    width: 20px;
+    height: 20px;
+    content: '';
+
+    background: none;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.statusInput {
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+
+  &:checked + .statusLabel::before {
+    background: url('../../checkbox.svg') center center no-repeat;
+  }
+}

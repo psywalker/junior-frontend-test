@@ -1,30 +1,106 @@
-.root {
-  padding: 20px;
+$tablet: 1024px;
+
+.productCard {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
-  grid-gap: 16px;
-  grid-auto-columns: 1fr;
-}
-
-.filtersContainer {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  grid-gap: 24px;
-}
-
-.itemsContainer {
-  display: grid;
-  grid-gap: 8px;
-}
-
-.productContainer {
-  padding: 8px;
-  border-bottom: 1px solid #989898;
-
-  & > span:not(:first-child) {
-    margin-left: 8px;
+  grid-template-columns: minmax(100px, 680px);
+  gap: 20px;
+  margin-bottom: 20px;
+  @media (min-width: 681px) and (max-width: $tablet) {
+    grid-template-columns: minmax(100px, 476px) minmax(100px, 476px);
+    margin-bottom: 40px;
+    gap: 24px;
+  }
+  @media (min-width: 1025px) {
+    grid-template-columns: minmax(100px, 448px) minmax(100px, 448px) minmax(100px, 448px);
+    margin-bottom: 40px;
+    gap: 24px;
   }
 }
 
-.productName {
-  font-weight: bold;
+.productCardItem {
+  background: #ffffff;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  min-height: 145px;
+  position: relative;
+  overflow: hidden;
+}
+
+.productCardContent {
+  display: grid;
+  grid-column-gap: 16px;
+  grid-template-columns: 116px 1fr;
+  height: 100%;
+}
+
+.productCardDescContainer {
+  position: relative;
+  padding: 12px 20px 12px 0;
+}
+.productCardCategoryName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a8b8ca;
+}
+.productCardName {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 6px 0 6px;
+}
+.productCardDescription {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 6px 0 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.productCardPriceContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 18px;
+  margin: 0;
+}
+
+.productCardPrice {
+  font-size: 16px;
+  font-weight: 700;
+}
+.productCardDiscount {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+  color: #ff9900;
+}
+.productCardImg {
+  > img {
+    width: 100%;
+  }
+}
+.statusBadges {
+  display: flex;
+  position: absolute;
+  right: 12px;
+  top: 8px;
+}
+
+.statusBadge {
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  background: #e7eef9;
+  color: #889bb1;
+  padding: 4px 6px;
+}
+
+.statusBadgeNew {
+  background: #e6f5e6;
+  color: #20b02e;
+  margin-left: 8px;
 }

@@ -1,0 +1,16 @@
+$tablet: 1024px;
+body {
+  background: #fafafa;
+  min-width: 300px;
+}
+
+.productsInner {
+  box-sizing: border-box;
+  padding: 0 24px;
+  max-width: 1392px;
+  margin: 0 auto;
+  position: relative;
+  @media (max-width: 680px) {
+    padding: 0 12px;
+  }
+}

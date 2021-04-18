@@ -1,0 +1,56 @@
+.filters {
+  padding: 25px 20px;
+  min-height: 152px;
+  box-sizing: border-box;
+  box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  background: #fff;
+  margin: 20px 0 0;
+  box-sizing: border-box;
+  max-width: 976px;
+  margin: 20px 0;
+  @media (min-width: 681px) {
+    margin: 40px 0;
+  }
+  @media (min-width: 1025px) {
+    max-width: 888px;
+  }
+}
+
+.filtersTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: #037bff;
+  padding-left: 25px;
+  background: url('../../filters.svg') left center no-repeat;
+}
+
+.filtersSectionContainer {
+  display: flex;
+}
+.filtersSection {
+}
+.filtersSectionContent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: -12px;
+  button {
+    margin: 0px 12px 12px 0;
+  }
+}
+
+.filtersSectionTitle {
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+  color: #a8b8ca;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.filtersSectionStatus {
+  margin-left: 20px;
+  width: 200px;
+}

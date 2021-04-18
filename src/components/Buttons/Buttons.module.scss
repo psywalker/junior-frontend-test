@@ -1,0 +1,18 @@
+.button {
+  color: #037bff;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #037bff;
+  padding: 4px 10px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &.buttonPress {
+    background: #037bff;
+    color: #fff;
+  }
+}
