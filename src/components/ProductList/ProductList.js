@@ -55,24 +55,17 @@ export const overlayStyles = () => ({
 const productCardImg = categoryName => {
   switch (categoryName) {
     case 'Wheat':
-      // return { src: 'images/Wheat@1x.png', srcSet: 'images/Wheat@1x.png 1x, images/Wheat@1x.png 2x' }
       return { src: `${Wheat1x}`, srcSet: `${Wheat1x}, ${Wheat2x}` }
     case 'Soybeans':
-      // return { src: 'images/Soybeans@1x.png', srcSet: '/images/Soybeans@1x.png 1x, images/Soybeans@1x.png 2x' }
       return { src: `${Soybeans1x}`, srcSet: `${Soybeans1x}, ${Soybeans2x}` }
     case 'Oats':
-      // return { src: 'images/Oats@1x.png', srcSet: 'images/Oats@1x.png 1x, images/Oats@1x.png 2x' }
       return { src: `${Oats1x}`, srcSet: `${Oats1x}, ${Oats2x}` }
     case 'Corn':
-      // return { src: 'images/Corn@1x.png', srcSet: 'images/Corn@1x.png 1x, images/Corn@1x.png 2x' }
       return { src: `${Corn1x}`, srcSet: `${Corn1x}, ${Corn2x}` }
     case 'Canola':
-      // return { src: 'images/Canola@1x.png', srcSet: 'images/Canola@1x.png 1x, images/Canola@1x.png 2x' }
       return { src: `${Canola1x}`, srcSet: `${Canola1x}, ${Canola2x}` }
-    case 'Barley':
-      // return { src: 'images/Barley@1x.png', srcSet: 'images/Barley@1x.png 1x, images/Barley@1x.png 2x' }
-      return { src: `${Barley1x}`, srcSet: `${Barley1x}, ${Barley2x}` }
     default:
+      return { src: `${Barley1x}`, srcSet: `${Barley1x}, ${Barley2x}` }
   }
 }
 const ProductList = memo(({ productItems, isFetch, isFetchError }) => {
