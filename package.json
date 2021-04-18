@@ -66,12 +66,9 @@
   },
   "scripts": {
     "start": "set ESLINT_NO_DEV_ERRORS=true && concurrently yarn:client yarn:server",
-    "build": "react-scripts build",
     "client": "react-scripts start",
     "server": "set NODE_ENV=development && nest start -p server/tsconfig.build.json --watch",
-    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet --fix",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "eslintConfig": {
     "extends": [

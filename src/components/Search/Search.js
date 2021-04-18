@@ -1,6 +1,7 @@
 import { useState, memo } from 'react'
 import styles from './Search.module.scss'
 import debounce from 'lodash/debounce'
+import searchIcon from '../../images/searchIcon.svg'
 
 const Search = memo(({ handleSearch }) => {
   const [value, setValue] = useState('')
@@ -21,13 +22,7 @@ const Search = memo(({ handleSearch }) => {
           if (value) handleSearch(value)
         }, 600)}
       >
-        <img
-          className={styles.searchButtonIcon}
-          src="images/searchIcon.svg"
-          width="17"
-          height="17"
-          alt="Search button"
-        />
+        <img className={styles.searchButtonIcon} src={searchIcon} width="17" height="17" alt="Search button" />
       </button>
       <input
         className={styles.searchInput}

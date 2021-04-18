@@ -1,6 +1,18 @@
 import { memo } from 'react'
 import styles from './ProductList.module.scss'
 import LoadingOverlay from 'react-loading-overlay'
+import Wheat1x from '../../images/Wheat@1x.png'
+import Wheat2x from '../../images/Wheat@2x.png'
+import Soybeans1x from '../../images/Soybeans@1x.png'
+import Soybeans2x from '../../images/Soybeans@2x.png'
+import Oats1x from '../../images/Oats@1x.png'
+import Oats2x from '../../images/Oats@2x.png'
+import Corn1x from '../../images/Corn@1x.png'
+import Corn2x from '../../images/Corn@2x.png'
+import Canola1x from '../../images/Canola@1x.png'
+import Canola2x from '../../images/Canola@2x.png'
+import Barley1x from '../../images/Barley@1x.png'
+import Barley2x from '../../images/Barley@2x.png'
 
 export const overlayStyles = () => ({
   wrapper: {
@@ -43,17 +55,23 @@ export const overlayStyles = () => ({
 const productCardImg = categoryName => {
   switch (categoryName) {
     case 'Wheat':
-      return { src: 'images/Wheat@1x.png', srcSet: '/images/Wheat@1x.png 1x, images/Wheat@1x.png 2x' }
+      // return { src: 'images/Wheat@1x.png', srcSet: 'images/Wheat@1x.png 1x, images/Wheat@1x.png 2x' }
+      return { src: `${Wheat1x}`, srcSet: `${Wheat1x}, ${Wheat2x}` }
     case 'Soybeans':
-      return { src: 'images/Soybeans@1x.png', srcSet: '/images/Soybeans@1x.png 1x, images/Soybeans@1x.png 2x' }
+      // return { src: 'images/Soybeans@1x.png', srcSet: '/images/Soybeans@1x.png 1x, images/Soybeans@1x.png 2x' }
+      return { src: `${Soybeans1x}`, srcSet: `${Soybeans1x}, ${Soybeans2x}` }
     case 'Oats':
-      return { src: 'images/Oats@1x.png', srcSet: 'images/Oats@1x.png 1x, images/Oats@1x.png 2x' }
+      // return { src: 'images/Oats@1x.png', srcSet: 'images/Oats@1x.png 1x, images/Oats@1x.png 2x' }
+      return { src: `${Oats1x}`, srcSet: `${Oats1x}, ${Oats2x}` }
     case 'Corn':
-      return { src: 'images/Corn@1x.png', srcSet: 'images/Corn@1x.png 1x, images/Corn@1x.png 2x' }
+      // return { src: 'images/Corn@1x.png', srcSet: 'images/Corn@1x.png 1x, images/Corn@1x.png 2x' }
+      return { src: `${Corn1x}`, srcSet: `${Corn1x}, ${Corn2x}` }
     case 'Canola':
-      return { src: 'images/Canola@1x.png', srcSet: 'images/Canola@1x.png 1x, images/Canola@1x.png 2x' }
+      // return { src: 'images/Canola@1x.png', srcSet: 'images/Canola@1x.png 1x, images/Canola@1x.png 2x' }
+      return { src: `${Canola1x}`, srcSet: `${Canola1x}, ${Canola2x}` }
     case 'Barley':
-      return { src: 'images/Barley@1x.png', srcSet: 'images/Barley@1x.png 1x, images/Barley@1x.png 2x' }
+      // return { src: 'images/Barley@1x.png', srcSet: 'images/Barley@1x.png 1x, images/Barley@1x.png 2x' }
+      return { src: `${Barley1x}`, srcSet: `${Barley1x}, ${Barley2x}` }
     default:
   }
 }
@@ -83,6 +101,7 @@ const ProductList = memo(({ productItems, isFetch, isFetchError }) => {
     )
   )
   const fetchErrorMessage = 'Ошибка сервера. Попробуйте обновить страницу.'
+  console.log('1.1: ', location)
   return (
     <main className={styles.productList} role="main">
       {isFetch && <LoadingOverlay active={isFetch} spinner text="Загрузка продуктов..." styles={overlayStyles()} />}
